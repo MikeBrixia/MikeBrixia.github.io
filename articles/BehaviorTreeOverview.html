@@ -75,7 +75,7 @@
     <p>The tree execute from top-left to bottom-right and has 4 types of nodes:
     Action, Decorator, Composite and Service.<br>
     Each node can be created, placed and inspected in the graph by the user.
-    User can also create it's own nodes by inheriting from the 1 of the 4 node types, for more
+    User can also create their own nodes by inheriting from 1 of the 4 node types, for more
     info about how to create your own nodes look at the <b>nodes reference</b> page.</p>
     
     <p>The tree uses a special component called <b>Blackboard</b> to store and access
@@ -83,7 +83,8 @@
     user-defined keys that hold properties that can be used by the tree to make decisions.
     For example you could have a Blackboard key called <i>canSeePlayer</i> of <i>boolean type</i> which
     determines if the controlled AI can see the player or not and use it as a condition to begin or stop
-    the execution of a given branch</p>
+    the execution of a given branch.<br>
+    The Blackboard supports a limited number of types which are listed <a href="/api/BT.Runtime.BlackboardSupportedTypes.html">here</a></p>
     
 <img src="Overview.png" width="698" height="375">
 
