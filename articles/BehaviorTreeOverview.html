@@ -97,12 +97,25 @@
 <p> You can also open the Behavior Tree Editor window by going to Window->AI->Behavior Tree Editor and then
     double-click on the desired Behavior Tree asset to display it in the graph.</p>
 <img src="/Images/WindowPanel.png" width="608" height="430">
-<p> Users can inspect the asset by selecting it in the content browser. 
+<p> 3. Users can inspect the asset by selecting it in the content browser. 
     Here the developer will be able to assing a Blackboard asset for the Tree
     to use.<br>
     Devs will also be able to choose if the tree asset should update each tick
     or at a user-defined interval.</p>
 <img src="/Images/BehaviorTreeAssetInspector.png" width="434" height="229">
+<p> 4. Once opened you will see that in the graph there is already a node, that's the root node, 
+       a special node which will serve as the entry point of the whole Tree. Here you can place the
+       mouse in the the graph and right-click on your mouse to make the nodes window appear. This window
+       will display all the nodes you can place in the graph subdivided by their type(Action, Decorator ecc...), 
+       click on the node you want to create and place it in the graph. Once in the graph you can select, inspect and drag
+       the node freely.</p>
+<img src="/Images/CreateNode.png" width="707" height="318">
+<p> 5. Because of their nature and design phylosophy, Decorator and Service nodes
+       cannot exist on their own inside the graph, but must be attached to Composite 
+       and Action nodes, for this reason to create this two special type of nodes you must
+       place your mouse over the desired node and right-click your mouse, doing this will make
+       decorator and service nodes appear in the node contextual menu.</p>
+<img src="/Images/CreateAttachedNode.png" width="640" height="304">
 
 </article>
           </div>
