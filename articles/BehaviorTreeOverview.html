@@ -68,14 +68,22 @@
 
 <h1 id="What-is-a-Behavior-Tree"><b>What is a Behavior Tree?</b></h1>
 <p> The Behavior Tree it's a system that allow developers to build AI logic and 
-    behaviors in a clean and visual way.</p>
+    behaviors in a clean and visual way. In Unity it's an asset called "<i>BehaviorTree</i>
+    which can be created from the Unity Editor UI.<br>
+    It is mainly used to create Artificial Intelligence logic for non-player characters</p>
     
     <p>The tree execute from top-left to bottom-right and has 4 types of nodes:
-    Action, Decorator, Composite and Service.</p>
+    Action, Decorator, Composite and Service.<br>
+    Each node can be created, placed and inspected in the graph by the user.
+    User can also create it's own nodes by inheriting from the 1 of the 4 node types, for more
+    info about how to create your own nodes look at the <b>nodes reference</b> page.</p>
     
-    <p>Behavior Trees uses a special component called <b>Blackboard</b> to store and access
+    <p>The tree uses a special component called <b>Blackboard</b> to store and access
     game data at runtime, You can think of it as the <i>brain</i> of the Tree, which contains
-    user-defined keys that hold properties that can be used to make decisions.</p>
+    user-defined keys that hold properties that can be used by the tree to make decisions.
+    For example you could have a Blackboard key called <i>canSeePlayer</i> of <i>boolean type</i> which
+    determines if the controlled AI can see the player or not and use it as a condition to begin or stop
+    the execution of a given branch</p>
     
 <img src="Overview.png" width="698" height="375">
 
