@@ -5,15 +5,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Nodes reference </title>
+    <title>BT Overview </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Add your introductions here! ">
     <meta name="generator" content="docfx 2.59.2.0">
     
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/docfx.vendor.css">
-    <link rel="stylesheet" href="/styles/docfx.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
   </head>
@@ -32,8 +32,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="/index.html">
-                <img id="logo" class="svg" src="/logo.svg" alt="">
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -66,8 +66,55 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<h1 id="Node-reference"><b>Node reference</b></h1>
-<p>Hi!</p>
+<h1 id="What-is-a-Behavior-Tree"><b>What is a Behavior Tree?</b></h1>
+<p> The Behavior Tree it's a system that allow developers to build AI logic and 
+    behaviors in a clean and visual way. In Unity it's an asset called "<i>BehaviorTree</i>
+    which can be created from the Unity Editor UI.<br>
+    It is mainly used to create Artificial Intelligence logic for non-player characters</p>
+    
+    <p>The tree execute from top-left to bottom-right and has 4 types of nodes:
+    Action, Decorator, Composite and Service.<br>
+    Each node can be created, placed and inspected in the graph by the user.
+    User can also create their own nodes by inheriting from 1 of the 4 node types, for more
+    info about how to create your own nodes look at the <b>nodes reference</b> page.</p>
+    
+    <p>The tree uses a special component called <b>Blackboard</b> to store and access
+    game data at runtime, You can think of it as the <i>brain</i> of the Tree, which contains
+    user-defined keys that hold properties that can be used by the tree to make decisions.
+    For example you could have a Blackboard key called <i>canSeePlayer</i> of <i>boolean type</i> which
+    determines if the controlled AI can see the player or not and use it as a condition to begin or stop
+    the execution of a given branch.<br>
+<img src="/Images/Overview.png" width="698" height="375">
+
+<h1 id="User-guide"><b>User guide</b></h1>
+<p> Quick guide on how to get started with the Behavior Tree System inside the Unity Editor</p>
+<p> <b>1. </b>To create a new Behavior Tree asset go to <b>Assets->Create->AI->Behavior Tree</b></p>
+<img src="/Images/Create.png" width="636" height="411">
+<p> <b>2. </b>Edit the asset name and confirm it's creation, once you've done that double-click on the asset to open
+       the Behavior Tree editor and inspect the selected asset. Behavior Tree assets can be inspected in the editor by
+       double-clicking on them.</p>
+<img src="/Images/Created.png" width="995" height="263">
+<p> You can also open the Behavior Tree Editor window by going to <b>Window->AI->Behavior Tree Editor</b> and then
+    double-click on the desired Behavior Tree asset to display it in the graph.</p>
+<img src="/Images/WindowPanel.png" width="608" height="430">
+<p> <b>3. </b>Users can inspect the asset by selecting it in the content browser. 
+    Here the developer will be able to assign a Blackboard asset for the Tree
+    to use. For more info about the Blackboard check the <a href="/articles/BlackboardOverview.html">Blackboard Overview page</a><br>
+    Devs will also be able to choose if the tree asset should update each tick
+    or at a user-defined interval.</p>
+<img src="/Images/BehaviorTreeAssetInspector.png" width="434" height="229">
+<p> <b>4. </b> Once opened you will see that in the graph there is already a node, that's the root node, 
+       a special node which will serve as the entry point of the whole Tree. Here you can place the
+       mouse in the the graph and right-click on your mouse to make the nodes window appear. This window
+       will display all the nodes you can place in the graph subdivided by their type(Action, Decorator ecc...), 
+       click on the node you want to create and place it in the graph. Once in the graph you can select, inspect and drag
+       the node freely.</p>
+<img src="/Images/CreateNode.png" width="707" height="318">
+<p> <b>5. </b> Because of their nature and design phylosophy, Decorator and Service nodes
+       cannot exist on their own inside the graph, but must be attached to Composite 
+       and Action nodes, for this reason to create and attach a node of those two types
+       you must first select a node in the graph and then right-click with your mouse.</p>
+<img src="/Images/CreateAttachedNode.png" width="640" height="304">
 
 </article>
           </div>
@@ -100,8 +147,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="/styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="/styles/docfx.js"></script>
-    <script type="text/javascript" src="/styles/"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
